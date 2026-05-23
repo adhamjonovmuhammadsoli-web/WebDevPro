@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="30 kunda professional web dasturchi bo'ling — HTML, CSS, JavaScript va zamonaviy texnologiyalarni o'rganing. Freelancing orqali daromad toping.">
+<meta name="keywords" content="web dasturlash, HTML, CSS, JavaScript, freelancing, Tailwind CSS, Git, GitHub, Uzbekistan">
+<meta name="author" content="WebDev Pro UZ">
+<meta property="og:title" content="WebDev Pro — 30 Kunlik Roadmap">
+<meta property="og:description" content="30 kunda professional web dasturchi bo'ling. HTML, CSS, JavaScript va freelancing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webdevproz.uz">
+<meta property="og:image" content="https://webdevproz.uz/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WebDev Pro — 30 Kunlik Roadmap">
+<meta name="twitter:description" content="30 kunda professional web dasturchi bo'ling.">
+<title>WebDev Pro — 30 Kunlik Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Space+Mono:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="layout.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay" role="presentation" aria-hidden="true"></div>
+
+<aside class="sidebar" id="sidebar" role="complementary" aria-label="Asosiy navigatsiya">
+  <div class="sidebar-logo">
+    <div class="logo-text">⚡ WEBDEV PRO</div>
+    <div class="logo-sub">30 KUNLIK ROADMAP</div>
+  </div>
+  <div class="sidebar-progress" role="region" aria-label="O'rganish progressi">
+    <div class="progress-label">
+      <span>PROGRESS</span>
+      <span id="progress-text" aria-live="polite">0 / 30</span>
+    </div>
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="30" aria-label="Bajarilgan kunlar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </div>
+  <nav class="sidebar-nav" role="navigation" aria-label="Sahifalar">
+    <div class="nav-section">SAHIFALAR</div>
+    <button class="nav-item active" data-page="home" aria-current="page" aria-label="Home sahifasi">
+      <span class="nav-icon" aria-hidden="true">🏠</span> Home
+    </button>
+    <button class="nav-item" data-page="roadmap" aria-label="Roadmap sahifasi">
+      <span class="nav-icon" aria-hidden="true">🗺️</span> Roadmap
+      <span class="nav-badge" aria-label="30 kun">30</span>
+    </button>
+    <button class="nav-item" data-page="lessons" aria-label="Darslar sahifasi">
+      <span class="nav-icon" aria-hidden="true">📚</span> Lessons
+    </button>
+    <button class="nav-item" data-page="projects" aria-label="Loyihalar sahifasi">
+      <span class="nav-icon" aria-hidden="true">🛠️</span> Projects
+      <span class="nav-badge" aria-label="6 loyiha">6</span>
+    </button>
+    <button class="nav-item" data-page="exams" aria-label="Imtihonlar sahifasi">
+      <span class="nav-icon" aria-hidden="true">📝</span> Exams
+    </button>
+    <button class="nav-item" data-page="resources" aria-label="Resurslar sahifasi">
+      <span class="nav-icon" aria-hidden="true">🔗</span> Resources
+    </button>
+    <button class="nav-item" data-page="tools" aria-label="Qurollar sahifasi">
+      <span class="nav-icon" aria-hidden="true">🔧</span> Tools
+    </button>
+    <button class="nav-item" data-page="freelancing" aria-label="Freelancing sahifasi">
+      <span class="nav-icon" aria-hidden="true">💰</span> Freelancing
+    </button>
+    <button class="nav-item" data-page="contact" aria-label="Aloqa sahifasi">
+      <span class="nav-icon" aria-hidden="true">📬</span> Contact
+    </button>
+  </nav>
+  <div class="sidebar-theme">
+    <button class="theme-toggle" id="theme-toggle-btn" aria-label="Mavzuni o'zgartirish" aria-pressed="false">
+      <span id="theme-icon" aria-hidden="true">🌙</span>
+      <span id="theme-label">Dark Mode</span>
+      <div class="toggle-switch" aria-hidden="true"><div class="toggle-dot"></div></div>
+    </button>
+  </div>
+</aside>
+
+<header class="topbar" role="banner">
+  <button class="menu-btn" id="menu-btn" aria-label="Sidebar menyuni ochish/yopish" aria-expanded="false" aria-controls="sidebar">☰</button>
+  <div class="topbar-title" id="topbar-title" aria-live="polite">HOME</div>
+  <div class="topbar-stats" aria-label="O'rganish statistikasi">
+    <div class="stat-chip">
+      <div class="stat-dot" aria-hidden="true"></div>
+      <span id="completed-count" aria-live="polite">0</span> Dars bajarildi
+    </div>
+    <div class="stat-chip">🔥 <span id="streak-count" aria-live="polite">0</span> kun streak</div>
+  </div>
+</header>
+
+<main class="main" id="main-content">
+
+  <!-- HOME -->
+  <div class="page active" id="page-home" role="main" aria-label="Home sahifasi">
+    <section class="hero" aria-label="Asosiy qahramonlik bo'lim">
+      <div class="hero-badge">🚀 30 KUNLIK INTENSIV KURS</div>
+      <h1 class="hero-title">0 dan<br><span>Web Dasturchi</span><br>bo'l!</h1>
+      <p class="hero-sub">
+        HTML, CSS, JavaScript va zamonaviy texnologiyalarni o'rgan.
+        1 oy ichida mini saytlar yaratib, freelancing orqali daromad topa boshlang.
+      </p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" data-nav="roadmap">🗺️ Roadmapni Ko'r</button>
+        <button class="btn btn-outline" data-nav="lessons">📚 Darslarni Boshlash</button>
+      </div>
+      <div class="hero-stats" aria-label="Kurs statistikasi">
+        <div class="hero-stat">
+          <div class="hero-stat-num glow-text">30</div>
+          <div class="hero-stat-label">KUN</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num glow-text">6</div>
+          <div class="hero-stat-label">LOYIHA</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num glow-text">$$$</div>
+          <div class="hero-stat-label">FREELANCE</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="O'rganiladigan texnologiyalar">
+      <div class="section-head">
+        <h2 class="section-title">O'rganiladigan <span>Texnologiyalar</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <div class="tech-pills" role="list" aria-label="Texnologiyalar ro'yxati">
+        <span class="tech-pill tech-html" role="listitem">🟧 HTML5</span>
+        <span class="tech-pill tech-css" role="listitem">🔷 CSS3</span>
+        <span class="tech-pill tech-js" role="listitem">🟨 JavaScript</span>
+        <span class="tech-pill tech-tailwind" role="listitem">🌬️ Tailwind CSS</span>
+        <span class="tech-pill tech-git" role="listitem">🔴 Git &amp; GitHub</span>
+        <span class="tech-pill tech-flex" role="listitem">⚡ Flexbox</span>
+        <span class="tech-pill tech-grid" role="listitem">🔮 CSS Grid</span>
+        <span class="tech-pill tech-responsive" role="listitem">📱 Responsive Design</span>
+        <span class="tech-pill tech-deploy" role="listitem">🌐 Deployment</span>
+        <span class="tech-pill tech-dom" role="listitem">🏗️ DOM Manipulation</span>
+      </div>
+    </section>
+
+    <section class="section" aria-label="30 kunlik yo'l xaritasi">
+      <div class="section-head">
+        <h2 class="section-title">30 Kunlik <span>Yo'l Xaritasi</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <div class="grid-2">
+        <article class="card cyber-border">
+          <div class="card-week-label card-week-cyan">📅 1-HAFTA — HTML ASOSLARI</div>
+          <p class="card-week-desc">HTML tuzilishi, teglar, atributlar, formalar, jadvallar va semantik HTML. Birinchi statik saytingizni yaratasiz.</p>
+          <div class="card-week-meta">KUN 1-7 • BEGINNER</div>
+        </article>
+        <article class="card cyber-border">
+          <div class="card-week-label card-week-purple">📅 2-HAFTA — CSS VA DIZAYN</div>
+          <p class="card-week-desc">CSS selectors, Box model, Flexbox, Grid, animatsiyalar va responsive dizayn. Professional ko'rinishli saytlar yaratish.</p>
+          <div class="card-week-meta">KUN 8-14 • INTERMEDIATE</div>
+        </article>
+        <article class="card cyber-border">
+          <div class="card-week-label card-week-green">📅 3-HAFTA — JAVASCRIPT</div>
+          <p class="card-week-desc">JavaScript asoslari, DOM manipulation, Events, LocalStorage va amaliy loyihalar. Interaktiv saytlar yaratish.</p>
+          <div class="card-week-meta">KUN 15-21 • INTERMEDIATE</div>
+        </article>
+        <article class="card cyber-border">
+          <div class="card-week-label card-week-orange">📅 4-HAFTA — PRO TOOLS &amp; FREELANCE</div>
+          <p class="card-week-desc">Tailwind CSS, Git/GitHub, Netlify deployment va freelancing boshlanishi. Birinchi pulingizni ishlab oling.</p>
+          <div class="card-week-meta">KUN 22-30 • ADVANCED</div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- ROADMAP -->
+  <div class="page" id="page-roadmap" aria-label="30 kunlik roadmap">
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">30 Kunlik <span>Roadmap</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <p class="section-sub">Har bir kunni bosing, kengaytiring va bajarganingizdan keyin belgilang ✅</p>
+      <div class="weeks-tabs" role="tablist" aria-label="Hafta filtri">
+        <button class="week-tab active" role="tab" aria-selected="true" data-week="0">Barcha Kunlar</button>
+        <button class="week-tab" role="tab" aria-selected="false" data-week="1">Hafta 1 — HTML</button>
+        <button class="week-tab" role="tab" aria-selected="false" data-week="2">Hafta 2 — CSS</button>
+        <button class="week-tab" role="tab" aria-selected="false" data-week="3">Hafta 3 — JS</button>
+        <button class="week-tab" role="tab" aria-selected="false" data-week="4">Hafta 4 — Pro</button>
+      </div>
+      <div class="days-grid" id="days-grid" role="list" aria-label="Kunlar ro'yxati"></div>
+    </section>
+  </div>
+
+  <!-- LESSONS -->
+  <div class="page" id="page-lessons" aria-label="Darslar">
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Batafsil <span>Darslar</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <p class="section-sub">Har bir texnologiya bo'yicha tushuntirish va kod namunalari</p>
+      <div id="lessons-content"></div>
+    </section>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="page" id="page-projects" aria-label="Portfolio loyihalari">
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Portfolio <span>Loyihalar</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <p class="section-sub">Bu loyihalarni yarating va portfolio saytingizga qo'shing</p>
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
+  </div>
+
+  <!-- EXAMS -->
+  <div class="page" id="page-exams" aria-label="Imtihonlar">
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Haftalik <span>Imtihonlar</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <p class="section-sub">Har hafta oxirida o'z bilimingizni sinovdan o'tkazing</p>
+      <div id="exams-content"></div>
+    </section>
+  </div>
+
+  <!-- RESOURCES -->
+  <div class="page" id="page-resources" aria-label="O'rganish resurslari">
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">O'rganish <span>Resurslari</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <p class="section-sub">Eng yaxshi bepul manbalar va platformalar</p>
+      <div class="grid-2" id="resources-grid"></div>
+    </section>
+  </div>
+
+  <!-- TOOLS -->
+  <div class="page" id="page-tools" aria-label="Developer qurollar">
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Developer <span>Tools</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <p class="section-sub">Professional dasturchi ishlatadigan asosiy qurollar</p>
+      <div class="tools-grid" id="tools-grid"></div>
+    </section>
+  </div>
+
+  <!-- FREELANCING -->
+  <div class="page" id="page-freelancing" aria-label="Freelancing va daromad">
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Freelancing va <span>Daromad</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <p class="section-sub">Mini sayt yasab pul ishlashning to'liq yo'l-yo'rig'i</p>
+      <div class="freelance-steps" id="freelance-steps"></div>
+      <div class="income-section">
+        <h3 class="income-heading">💰 Narx Jadvali — Yangi boshlovchilar uchun</h3>
+        <div class="card">
+          <table class="income-table" aria-label="Xizmat narxlari jadvali">
+            <thead>
+              <tr>
+                <th scope="col">Xizmat</th>
+                <th scope="col">Narx (USD)</th>
+                <th scope="col">Vaqt</th>
+                <th scope="col">Daraja</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Landing Page</td><td class="price">$30–80</td><td>2–3 kun</td><td><span class="difficulty d-easy">Oson</span></td></tr>
+              <tr><td>Portfolio Sayt</td><td class="price">$50–120</td><td>3–5 kun</td><td><span class="difficulty d-easy">Oson</span></td></tr>
+              <tr><td>Barber / Salon Sayt</td><td class="price">$80–200</td><td>5–7 kun</td><td><span class="difficulty d-medium">O'rta</span></td></tr>
+              <tr><td>Restaurant Website</td><td class="price">$100–250</td><td>7–10 kun</td><td><span class="difficulty d-medium">O'rta</span></td></tr>
+              <tr><td>Biznes Landing + Admin</td><td class="price">$150–400</td><td>10–14 kun</td><td><span class="difficulty d-hard">Qiyin</span></td></tr>
+              <tr><td>E-commerce (sodda)</td><td class="price">$200–500</td><td>14–21 kun</td><td><span class="difficulty d-hard">Qiyin</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="page" id="page-contact" aria-label="Aloqa sahifasi">
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Aloqa va <span>Savol</span></h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <p class="section-sub">Savollaringiz bo'lsa, yuboring</p>
+      <div class="grid-2">
+        <div>
+          <div class="contact-form" role="region" aria-label="Savol yuborish formasi">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Ismingiz</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Ismingizni kiriting..." autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-telegram">Telegram</label>
+              <input type="text" id="contact-telegram" class="form-input" placeholder="@username" autocomplete="username">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Savolingiz</label>
+              <textarea id="contact-message" class="form-textarea" rows="5" placeholder="Savolingizni yozing..."></textarea>
+            </div>
+            <button class="btn btn-primary btn-submit" id="contact-submit" type="button">📨 Yuborish</button>
+          </div>
+        </div>
+        <div class="contact-links">
+          <article class="card">
+            <div class="contact-card-icon" aria-hidden="true">💬</div>
+            <h3 class="contact-card-title">Telegram Guruh</h3>
+            <p class="contact-card-desc">O'rtoqlaringiz bilan birga o'rganing, savol bering</p>
+            <a href="https://t.me/WebDevProUZ" class="btn btn-outline contact-card-btn" target="_blank" rel="noopener noreferrer" aria-label="Telegram guruhiga qo'shilish">@WebDevProUZ</a>
+          </article>
+          <article class="card">
+            <div class="contact-card-icon" aria-hidden="true">👤</div>
+            <h3 class="contact-card-title">My Profile</h3>
+            <p class="contact-card-desc">Savollaringiz bo'lsa biz bilan bog'laning</p>
+            <a href="https://t.me/Adkhamjono_v" class="btn btn-outline contact-card-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub sahifasini ochish">@Adkhamjono_v</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<div class="notification" id="notification" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

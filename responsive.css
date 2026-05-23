@@ -1,0 +1,156 @@
+@media (max-width: 1024px) {
+  .days-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .overlay.show {
+    display: block;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .topbar {
+    left: 0;
+  }
+
+  .menu-btn {
+    display: flex;
+    align-items: center;
+  }
+
+  .topbar-stats {
+    display: none;
+  }
+
+  .section {
+    padding: 32px 16px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .weeks-tabs {
+    gap: 6px;
+  }
+
+  .week-tab {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+  }
+
+  .days-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .freelance-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .income-table th,
+  .income-table td {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+
+  .contact-links .card {
+    padding: 16px;
+  }
+
+  .notification {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .hero-stat {
+    padding: 14px 10px;
+  }
+
+  .hero-stat-num {
+    font-size: 1.4rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    white-space: normal;
+  }
+
+  .income-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .weeks-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .days-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px,1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-contrast: high) {
+  .card,
+  .day-card,
+  .project-card,
+  .tool-card,
+  .resource-card {
+    border-width: 2px;
+  }
+}
