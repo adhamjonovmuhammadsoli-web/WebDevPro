@@ -167,15 +167,15 @@ function renderDays() {
         <div class="day-desc"><strong>🔥 Challenge:</strong> ${d.challenge}</div>
         <div class="quiz-container" role="region" aria-label="Mini imtihon">
           <div class="quiz-label">MINI IMTIHON</div>
-          <div class="quiz-q" id="quiz-q-${d.day}">${d.quiz.q}</div>
+          <div class="quiz-q" id="quiz-q-${d.day}">${escHtml(d.quiz.q)}</div>
           <div class="quiz-options" role="group" aria-labelledby="quiz-q-${d.day}">
             ${d.quiz.opts.map((o, i) => `
               <button class="quiz-opt"
                 data-correct="${d.quiz.ans}"
                 data-day="${d.day}"
                 data-index="${i}"
-                aria-label="${o}"
-                type="button">${o}</button>
+                aria-label="${escHtml(o)}"
+                type="button">${escHtml(o)}</button>
             `).join('')}
           </div>
         </div>
