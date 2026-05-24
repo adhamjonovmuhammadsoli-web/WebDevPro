@@ -1,0 +1,288 @@
+@media (max-width: 1024px) {
+  .days-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .overlay.show {
+    display: block;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .topbar {
+    left: 0;
+  }
+
+  .menu-btn {
+    display: flex;
+    align-items: center;
+  }
+
+  .topbar-stats {
+    display: none;
+  }
+
+  .section {
+    padding: 32px 16px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .weeks-tabs {
+    gap: 6px;
+  }
+
+  .week-tab {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+  }
+
+  .days-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .freelance-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .income-table th,
+  .income-table td {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+  }
+
+  .contact-links .card {
+    padding: 16px;
+  }
+
+  .notification {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .hero-stat {
+    padding: 14px 10px;
+  }
+
+  .hero-stat-num {
+    font-size: 1.4rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    white-space: normal;
+  }
+
+  .income-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .weeks-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .days-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px,1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-contrast: high) {
+  .card,
+  .day-card,
+  .project-card,
+  .tool-card,
+  .resource-card {
+    border-width: 2px;
+  }
+}
+
+/* ===== LESSONS — MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  /* Grid 1 ustun */
+  .lessons-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Summary yanada compact */
+  .lessons-summary {
+    padding: 14px 16px;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .ls-count { font-size: 1.3rem; }
+  .ls-bar-wrap { min-width: 100px; }
+
+  /* Detail panel full screen */
+  .lesson-detail-panel {
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Header compact */
+  .ldp-header {
+    padding: 10px 14px;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  /* Back tugmasi kichikroq */
+  .ldp-back {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+    min-height: 36px;
+  }
+
+  /* Breadcrumb to'liq joy olmasin */
+  .ldp-breadcrumb {
+    font-size: 0.72rem;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .ldp-sep { display: none; }
+  .ldp-breadcrumb span:first-child { display: none; }
+
+  /* Done tugmasi kichikroq */
+  .ldp-done-btn {
+    font-size: 0.65rem;
+    padding: 6px 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Topic tabs scroll */
+  .ldp-nav-tabs {
+    padding: 10px 14px;
+    gap: 3px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ldp-tab {
+    padding: 6px 10px;
+    font-size: 0.68rem;
+    min-height: 34px;
+  }
+
+  /* Body padding kichikroq */
+  .ldp-body {
+    padding: 20px 16px 40px;
+  }
+
+  /* Navigatsiya tugmalari to'liq kenglik */
+  .ldp-nav-btns {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .ldp-nav-prev,
+  .ldp-nav-next {
+    flex: 1;
+    text-align: center;
+    padding: 12px 10px;
+    min-height: 44px;
+  }
+
+  /* Topic list touch-friendly */
+  .lesson-topic.lc-topic-item {
+    padding: 10px 6px;
+    min-height: 44px;
+  }
+
+  /* Start button full width */
+  .lc-start-btn {
+    min-height: 44px;
+  }
+
+  /* Tip preview compact */
+  .lc-tip-preview {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header'da faqat orqaga va done tugmasi ko'rinsin */
+  .ldp-breadcrumb {
+    display: none;
+  }
+
+  /* Code block kichikroq font */
+  .ldp-code {
+    font-size: 0.72rem;
+    padding: 14px 12px;
+  }
+
+  /* Desc font */
+  .ldp-desc {
+    font-size: 0.92rem;
+  }
+
+  /* Summary vertical */
+  .lessons-summary {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .ls-bar-wrap {
+    min-width: unset;
+  }
+}
